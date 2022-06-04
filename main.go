@@ -22,8 +22,20 @@ func main() {
 	_ = cl
 	// Prefund your address
 	// eth.sendTransaction({from:personal.listAccounts[0], to:"0x6177843db3138ae69679A54b95cf345ED759450d", value: "10000000000000000"})
+
 	// Send a transaction
-	// sendTransaction(cl)
+	/*
+		if err := sendTransaction(cl); err != nil {
+			panic(err)
+		}
+	*/
+
+	// Deploy a contract and interact with it
+	/*
+		if err := DeployContract(cl); err != nil {
+			panic(err)
+		}
+	*/
 }
 
 // createKeyPair creates a secret, public key pair, and corresponding address.

@@ -3,6 +3,7 @@
 pragma solidity ^0.8.14;
 contract CoolContract {
     uint256 balance;
+    // TODO add value 
     event Deposited(address addr);
     
     function Deposit() public payable {

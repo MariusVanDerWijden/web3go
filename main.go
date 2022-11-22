@@ -29,13 +29,14 @@ func main() {
 			panic(err)
 		}
 	*/
-
 	// Deploy a contract and interact with it
-	/*
-		if err := DeployContract(cl); err != nil {
-			panic(err)
-		}
-	*/
+
+	if err := DeployContract(cl); err != nil {
+		panic(err)
+	}
+
+	// batchGetTransaction("/tmp/geth.ipc")
+	// queryGethClient("/tmp/geth.ipc")
 }
 
 // createKeyPair creates a secret, public key pair, and corresponding address.

@@ -48,7 +48,6 @@ func DeployContract(cl *ethclient.Client) error {
 	if err := callSeeBalance(contract); err != nil {
 		return err
 	}
-
 	// Call the deposit function
 	if err := callDeposit(cl, contract, transactOpts); err != nil {
 		return err
@@ -63,7 +62,6 @@ func DeployContract(cl *ethclient.Client) error {
 	if err := filterDepositEvents(contract); err != nil {
 		return err
 	}
-
 	return nil
 }
 

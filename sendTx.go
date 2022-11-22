@@ -46,7 +46,10 @@ func sendTransaction(cl *ethclient.Client) error {
 			Data:      nil,
 		})
 	// Sign the transaction using our keys
-	signedTx, _ := types.SignTx(tx, types.NewEIP155Signer(chainid), sk)
+	signedTx, err := types.SignTx(tx, types.NewLondonSigner(chainid), sk)
+	if err != nil {
+		panic(err)
+	}
 	// Send the transaction to our node
 	return cl.SendTransaction(context.Background(), signedTx)
 }

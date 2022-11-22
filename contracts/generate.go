@@ -5,4 +5,5 @@ package contracts
 // Make executable
 // chmod +x solc-static-linux
 
-//go:generate abigen --pkg contracts --sol CoolContract.sol --out coolContract.go --solc ./solc-static-linux
+//go:generate ./solc-static-linux --overwrite --bin --abi -o . CoolContract.sol
+//go:generate abigen --pkg contracts --type CoolContract --abi CoolContract.abi --bin CoolContract.bin --out coolContract.go
